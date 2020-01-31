@@ -1,0 +1,50 @@
+notes git:
+
+
+Was ist Git?:
+	- Version-Control-System (VCS)
+	- Erfinder: Linus Torvalds in 2005
+	- "distributed" oder "decentralized" (jeder kann lokal arbeiten)
+	- "Wer hat welche Änderungen Wo gemacht?"
+	- Möglichkeit jederzeit auf "ältere Version" zurück zu setzen
+	
+Warum Git und Github nutzen?
+	- erleichtertes Arbeiten in Teams (zb mit Branches)
+	- Code ist von überall erreichbar (bei Nutzung von Github/Bitbucket/etc.)
+	- Feedback/Pull-Requests 
+	- zum Angeben!
+	- du wirst es sowieso irgendwann brauchen...
+	(Nachbearbeitung: Effizienter als Konkurrenz)
+	
+Git-Konzepte:
+	- notiert die Code-History
+	- macht "Momentaufnahmen" von Dateien
+	- man entscheidet selbst wann diese "Momentaufnahmen" gemacht werden sollen ("commit")
+	- man kann auf jede einzelne "Momentaufnahme" wechseln
+	- hat "Vorschau-Bereich" ("Staging Area") vor einem "commit"
+
+Beispiel am Bild:
+	- commits
+	- timeline
+	- changes
+	- 
+
+Wichtigste Kommandos:
+	- $ git init (Initialisierung)
+	- $ git add <file> (für "Vorschau-Bereich")
+	- $ git status (wie sieht "Vorschau-Bereich" aus)
+	- $ git commit (macht "Momentaufnahme")
+	- REMOTE:
+	- $ git push
+	- $ git pull
+	- $ git clone
+	
+Installation:
+	- Linux (Debian)
+		- apt-get install git
+	- Linux (Fedora)
+		- yum install git
+	- Mac/Windows
+		- git-scm.com
+	
+Reales Beispiel für Initialisierung eines git repos und push zu remote

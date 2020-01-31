@@ -1,50 +1,176 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <style>
+      .reveal .slides section .fragment.fade-down {
+        opacity: 1;
+        visibility: visible;
+      }
+      .reveal .slides section .fragment.fade-down.visible,
+      .reveal .slides section .fragment.visible:not(.current-fragment) {
+        color: grey;
+      }
+      .reveal .slides section .fragment.fade-down,
+      .reveal .slides section .fragment.current-fragment {
+        color: #1b91ff;
+      }
+      .hole {
+        position: relative;
+        display: inline-table;
+        margin: 10px;
+      }
+      .hole img {
+        opacity: 0.5;
+      }
+      .hole:after {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        height: 50%;
+        background: url(assets/githubhistory.png) no-repeat 0 0;
+        border-radius: 40%;
+      }
+      .hole2 img,
+      .hole3 img {
+        filter: blur(2px);
+      }
+      .hole3:after {
+        width: 100px;
+        height: 50px;
+        margin: auto;
+        background-size: 300px 300px;
+        background-position: 0% 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>GIT</h1>
+          <p>
+            <small>präsentiert von Lars Kroll</small>
+          </p>
+        </section>
+        <section id="fragments">
+          <h2>Was ist Git?</h2>
+          <br />
+          <br />
+          <section>Version-Control-System (VCS)</section>
+          <section>Erfinder: Linus Torvalds in 2005</section>
+          <section>
+            "distributed" oder "decentralized"
+            <aside class="notes">
+              (jeder kann lokal arbeiten)
+            </aside>
+          </section>
+          <section>
+            Sammelt wichtige Informationen
+            <aside class="notes">"Wer hat welche Änderungen Wo gemacht?"</aside>
+          </section>
+          <section>
+            Rollback einfach gemacht
+            <aside class="notes">
+              Möglichkeit jederzeit auf "ältere Version" zurück zu setzen
+            </aside>
+          </section>
+        </section>
+        <section class="fragments">
+          <h2>Warum Git/Github?</h2>
+          <ul>
+            <li class="fragment">Teamwork</li>
+            <li class="fragment">Cloudspeicherung (Github)</li>
+            <li class="fragment">Feedback/starke Community</li>
+            <li class="fragment">zum Angeben!</li>
+            <li class="fragment">man brauch es sowieso irgendwann...</li>
+            <img
+              class="fragment"
+              data-src="assets/companies.png"
+              width="500"
+              alt=""
+            />
+            <aside class="notes">
+              <ol>
+                <li>erleichtertes Arbeiten in Teams (zb mit Branches)</li>
+                <li>
+                  Code ist von überall erreichbar (bei Nutzung von
+                  Github/Bitbucket/etc.)
+                </li>
+                <li>
+                  Möglichkeit Code von anderen zu verbessern und zu zeigen
+                  ("Pullrequests")
+                </li>
+                <li>gute Bewerbungsgrundlage, "social Network"-Aspekte</li>
+                <li>
+                  "jeder" nutzt git: Microsoft, Facebook, Amazon, Cisco,
+                  T-Mobile, Google, Android ...
+                </li>
+              </ol>
+            </aside>
+          </ul>
+        </section>
+        <section>
+          <h2>Git-Konzepte</h2>
+          <section>
+            <div
+              style="position: absolute; width: 20%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;"
+            ></div>
+          </section>
+        </section>
+        <section>
+          <div class="hole hole3">
+            <img src="assets/githubhistory.png" width="800" />
+          </div>
+        </section>
+      </div>
+    </div>
 
-		<script src="js/reveal.js"></script>
+    <script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        hash: true,
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/highlight/highlight.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/zoom-js/zoom.js', async: true }
+        ]
+      });
+    </script>
+  </body>
 </html>
