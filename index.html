@@ -37,7 +37,7 @@
       }
       .reveal .slides section .fragment.fade-down,
       .reveal .slides section .fragment.current-fragment {
-        color: #1b91ff;
+        color: #f8f8f8;
       }
       .hole {
         position: relative;
@@ -70,6 +70,15 @@
         margin: auto;
         background-size: 300px 300px;
         background-position: 0% 0%;
+      }
+      .white-bg {
+        background-color: rgb(231, 231, 231);
+      }
+      .container{
+        display: flex;
+      }
+      .col{
+        flex: 1;
       }
     </style>
   </head>
@@ -142,15 +151,43 @@
         <section>
           <h2>Git-Konzepte</h2>
           <section>
-            <div
-              style="position: absolute; width: 20%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;"
-            ></div>
+            <p class="fragment">"Momentaufnahmen" ("commits") von Dateien</pclass="fragment">
+            <div class="white-bg fragment">
+              <img data-src="assets/gitareas.png" width="400" />
+            </div>
+          </section>
+          <section>
+            <p class="fragment">notiert die Code-History</p>
+            <img
+              class="fragment"
+              data-src="assets/githubhistory.png"
+              width="600"
+            />
           </section>
         </section>
-        <section>
-          <div class="hole hole3">
-            <img src="assets/githubhistory.png" width="800" />
-          </div>
+        <section class="fragemnts">
+          <h2>Wichtigste Kommandos</h2>
+          <div class="container">
+
+            <div class="col">
+              <ul>
+                <p class="fragment">Local</p>
+                <li class="fragment">git init</li>
+                <li class="fragment">git add</li>
+                <li class="fragment">git status</li> 
+                <li class="fragment">git commit</li>
+              </ul>
+            </div>
+          
+            <div class="col">
+              <ul>
+                <p class="fragment">Remote</p>
+                <li class="fragment">git push</li>
+                <li class="fragment">git pull</li>
+                <li class="fragment">git clone</li>
+              </ul>
+            </div>
+      </div>
         </section>
       </div>
     </div>
