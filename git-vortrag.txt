@@ -34,7 +34,7 @@ Wichtigste Kommandos:
 	- $ git add <file> (für "Vorschau-Bereich")
 	- $ git status (wie sieht "Vorschau-Bereich" aus)
 	- $ git commit (macht "Momentaufnahme")
-	- REMOTE:
+	  REMOTE:
 	- $ git push
 	- $ git pull
 	- $ git clone
